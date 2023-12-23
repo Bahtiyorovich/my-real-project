@@ -1,39 +1,25 @@
-import { FaFacebookSquare,  FaLinkedinIn, FaTwitter, FaGithub } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-
-import './navbar.css'
-import { Logo } from "../../assets";
-
-
+import { Link } from "react-router-dom"
+import { listItems } from "../../constants/data"
 const Navbar = () => {
   return (
-    <section>
-      <header>
-        <article>
-          <FaFacebookSquare  className="header-icon"/>
-          <FaLinkedinIn  className="header-icon"/>
-          <FaTwitter  className="header-icon"/>
-          <FaGithub  className="header-icon"/>
-        </article>
-        <article>
-          <MdEmail className="header-icon"/>
-          <span id="head-email__text"> example@gmail.com</span>
-        </article>
-      </header>
-      <nav className="navbar">
-        <img src={Logo} alt="react logo" width={'70px'} height={'70px'} className="animate__logo"/>
-        <ul>
-          <li>About</li>
-          <li>Contact</li>
-          <li>Faq</li>
-          <li>Login</li>
-          <li>Register</li>
-        </ul>
-      </nav>
-    </section>
+    <div className="flex items-center justify-between px-[112px] h-[10vh]">
+      <h2 className="text-[22px] font-[700]">PageOne<span className="text-pink-600">.</span></h2>
+      <ul className="flex items-center gap-12">
+          {
+            listItems.map(item => (
+              <Link 
+                to={item.url}
+                key={item.link} 
+                className="duration-300 cursor-pointer hover:text-pink-500"
+              >
+                {item.link}
+              </Link>
+            ))
+          }
+      </ul>
+      
+    </div>
   )
 }
-
-// npm i react-icons
 
 export default Navbar
