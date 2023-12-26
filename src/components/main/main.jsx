@@ -14,6 +14,32 @@ const Main = () => {
       >
         We are web agency based in Los Angeles, CA
       </h1>
+
+      <div className="flex items-center justify-around mt-20 py-4">
+        <p className="w-1/3">
+          <span className="text-slate-800 font-semibold ">Far far away, behind the word mountains</span>, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+
+          <ul className="grid grid-cols-2 leading-8 w-1/3 text-pink-500 underline">
+            <li>
+              <a href="">Lorem ipsum</a>
+            </li>
+            <li>
+              <a href="">Lorem ipsum</a>
+            </li>
+            <li>
+              <a href="">Lorem ipsum</a>
+            </li>
+            <li>
+              <a href="">Lorem ipsum</a>
+            </li>
+            <li>
+              <a href="">Lorem ipsum</a>
+            </li>
+            <li>
+              <a href="">Lorem ipsum</a>
+            </li>
+          </ul>
+      </div>
     </div>
   )
 }
