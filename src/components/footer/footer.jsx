@@ -2,9 +2,18 @@ import { FaTwitter, FaInstagram, FaFacebookF, FaPhoneAlt, FaHeart} from "react-i
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { FaMapLocationDot } from "react-icons/fa6";
 
+import Aos from "aos";
+import 'aos/dist/aos.css';
+Aos.init();
+
+
 const Footer = () => {
+
   return (
-    <div className="h-[60vh] px-20 py-12 bg-slate-100/50">
+    <div 
+      data-aos="fade-up"
+      data-aos-duration="2000"
+      className="h-[60vh] px-20 py-12 bg-slate-100/50 mt-20">
         <div className="flex items-start justify-around ">
           <div className="w-[35%]">
             <h3 className="text-2xl font-semibold mb-4">About</h3>
