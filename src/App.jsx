@@ -1,7 +1,17 @@
 import { Routes, Route } from "react-router-dom"
-import { About, Clients, Contact, Footer, Login, Main, Navbar, Process, Services } from "./components"
+import { About, Auth, Clients, Contact, Footer, Main, Navbar, Process, Services } from "./components"
+import { useState } from "react"
 
 const App = () => {
+
+  const [user, setUser] = useState(false);
+
+  if(!user) {
+    return (
+      <Auth/>
+    )
+  }
+
   return (
     <>
       <Navbar/>

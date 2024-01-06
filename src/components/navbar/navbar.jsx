@@ -1,14 +1,9 @@
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { listItems } from "../../constants/data"
-import { useState } from "react"
+import {useEffect, useState } from "react"
 
 const Navbar = () => {
-
-  const [isActive, setIsActive] = useState(`${listItems[0].link}`);
-  
-  const onIsActive = (link) => {
-    setIsActive(link);
-  }
+  const [isActive, setIsActive] = useState(listItems[0].link);
 
   return (
     <div className="flex items-center justify-between px-[112px] h-[10vh]">
@@ -19,10 +14,10 @@ const Navbar = () => {
               <Link 
                 to={item.url}
                 key={item.link} 
-                className={isActive === `${item.link}` 
+                className={isActive === item.link  
                   ? "bg-pink-500 text-white w-full h-full px-6 py-2" 
                   : "duration-300 cursor-pointer hover:text-pink-500 px-6 py-2"}
-                onClick={()=> onIsActive(item.link)}
+                onClick={() => setIsActive(item.link)}
               >
                 {item.link}
               </Link>

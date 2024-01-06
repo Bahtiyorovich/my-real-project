@@ -1,11 +1,15 @@
-import { FaTwitter, FaInstagram, FaFacebookF, FaPhoneAlt, FaHeart} from "react-icons/fa";
+import { 
+  FaTwitter, 
+  FaInstagram, 
+  FaFacebookF, 
+  FaPhoneAlt, 
+  FaHeart } from "react-icons/fa";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { FaMapLocationDot } from "react-icons/fa6";
 
 import Aos from "aos";
 import 'aos/dist/aos.css';
 Aos.init();
-
 
 const Footer = () => {
 
